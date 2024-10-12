@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 19:51:02 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/12 09:40:30 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/12 13:07:45 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *str, int c, size_t num)
 	i = 0;
 	new_c = (unsigned char)c;
 	ptr = (unsigned char *)str;
-	while (ptr[i] && i < num)
+	while (i < num)
 	{
 		if (ptr[i] == new_c)
 			return (&ptr[i]);

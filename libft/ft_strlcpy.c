@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:29:52 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/12 09:47:56 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/12 17:40:40 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,17 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t sizeDest)
 	size_t	i;
 
 	i = 0;
-	ft_bzero(dest, sizeof(dest));
-	while (src[i] && (i < sizeDest))
+	if (sizeDest == 0)
+	{
+		while (dest[i] != 0)
+			i++;
+		return (i);
+	}
+	while (src[i] && (i < sizeDest - 1))
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[sizeDest] = '\0';
-	return (ft_strlen(dest));
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }

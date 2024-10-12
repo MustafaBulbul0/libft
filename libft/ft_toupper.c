@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:50:49 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/11 23:02:54 by mustafa          ###   ########.fr       */
+/*   Updated: 2024/10/12 11:35:31 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int up)
+int	ft_toupper(int up)
 {
 	if (up > 96 && up < 123)
 		return (up - 32);
