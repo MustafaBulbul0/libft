@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 21:53:55 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/10 20:04:30 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/12 09:39:16 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *str, size_t sizeStr)
 {
-	size_t	i;
-	unsigned char *ptr;
-	
+	size_t			i;
+	unsigned char	*ptr;
+
 	ptr = (unsigned char *)str;
 	i = 0;
 	while (i < sizeStr)
