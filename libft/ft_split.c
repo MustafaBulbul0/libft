@@ -6,11 +6,13 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:37:24 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/13 21:09:32 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/14 00:05:08 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_num_value(int n, char *num, int last_ind);
 
 static size_t	ft_count_words(char const *s, char c)
 {
@@ -69,12 +71,7 @@ char	**ft_split(char const *s, char c)
 	{
 		ptr[j] = ft_allocate_word(s, c, &i);
 		if (!ptr[j])
-		{
-			while (j > 0)
-				free(ptr[--j]);
-			free(ptr);
 			return (NULL);
-		}
 		j++;
 	}
 	return (ptr);
