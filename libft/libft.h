@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:05:21 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/12 17:14:24 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/13 12:36:32 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isascii(int isac);
 int		ft_digit(int num);
 int		ft_isprint(int isprintable);
 void	*ft_memchr(const void *str, int c, size_t num);
-int	ft_memcmp(const void *str1, const void *str2, size_t num);
+int		ft_memcmp(const void *str1, const void *str2, size_t num);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *str, int newCh, size_t sizeStr);
