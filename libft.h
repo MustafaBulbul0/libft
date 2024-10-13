@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:05:21 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/13 23:50:09 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/14 00:17:16 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 int		ft_atoi(const char *chNum);
 void	ft_bzero(void *str, size_t sizeStr);

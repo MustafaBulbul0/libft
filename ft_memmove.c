@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:05:42 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/12 17:00:55 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/14 00:26:28 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,10 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*n_dest;
-	unsigned char		*n_src;
-	size_t				i;
+	unsigned char	*n_dest;
+	unsigned char	*n_src;
 
 	n_dest = (unsigned char *)dest;
-	n_src = (unsigned char *)src;
-	if (n_dest == n_src || n == 0)
-		return (dest);
-	if (n_dest < n_src)
-	{
-		i = 0;
-		while (i < n)
-		{
-			n_dest[i] = n_src[i];
-			i++;
-		}
-	}
-	else
-		i = n;
-	while (i > 0)
-	{
-		n_dest[i - 1] = n_src[i - 1];
-		i--;
-	}
-	return (dest);
+	n_src = ft_strdup((const unsigned char *)src);
+	return (ft_memcpy(n_dest, n_src, n));
 }
