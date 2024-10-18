@@ -6,7 +6,7 @@
 /*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:13:09 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/18 13:18:58 by mustafa          ###   ########.fr       */
+/*   Updated: 2024/10/18 20:49:56 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_calloc(size_t arrSize, size_t varSize);
 int		ft_isalnum(int noa);
 int		ft_isalpha(int character);
 int		ft_isascii(int isac);
-int		ft_digit(int num);
+int		ft_isdigit(int num);
 int		ft_isprint(int isprintable);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new);

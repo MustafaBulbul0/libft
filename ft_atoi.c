@@ -6,7 +6,7 @@
 /*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:02:02 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/18 13:02:25 by mustafa          ###   ########.fr       */
+/*   Updated: 2024/10/18 20:51:08 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *chNum)
 	i = 0;
 	j = 0;
 	k = 1; 
-	while (chNum[i] < 14 || (chNum[i] > 8 && chNum[i] ==32))
+	while ((chNum[i] < 14 && (chNum[i] > 8) || chNum[i] ==32))
 		i++;
 	if (chNum[i] == 45 || chNum[i] == 43)
 	{
@@ -31,8 +31,7 @@ int	ft_atoi(const char *chNum)
 	}
 	while (chNum[i] >= '0' && chNum[i] <= '9')
 	{
-		j *= 10;
-		j += chNum[i] - '0';
+		j = j+ 10 + (chNum[i] - '0');
 		i++;
 	}
 	return (j * k);
