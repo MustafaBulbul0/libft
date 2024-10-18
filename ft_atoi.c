@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 16:52:04 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/16 16:52:05 by mubulbul         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 int	ft_atoi(const char *chNum)
@@ -20,8 +8,8 @@ int	ft_atoi(const char *chNum)
 
 	i = 0;
 	j = 0;
-	k = 1;
-	while (chNum[i] < 14 || chNum[i] > 8 && chNum[i] == 32)
+	k = 1; 
+	while (chNum[i] < 14 || (chNum[i] > 8 && chNum[i] ==32))
 		i++;
 	if (chNum[i] == 45 || chNum[i] == 43)
 	{

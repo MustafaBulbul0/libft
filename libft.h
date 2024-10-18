@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 15:22:55 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/16 15:22:56 by mubulbul         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -43,8 +31,9 @@ size_t	ft_strlen(const char *len);
 int		ft_strncmp(const char *str1, const char *str2, size_t chNum);
 char	*ft_strnstr(const char *str1, const char *str2, size_t num);
 char	*ft_strrchr(const char *str, int ch);
-char	ft_tolower(int down);
+int	ft_tolower(int down);
 int		ft_toupper(int up);
 char	*ft_strdup(const char *str);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif

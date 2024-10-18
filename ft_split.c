@@ -1,18 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 15:19:29 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/16 15:19:30 by mubulbul         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-
-static char	*ft_num_value(int n, char *num, int last_ind);
 
 static size_t	ft_count_words(char const *s, char c)
 {
