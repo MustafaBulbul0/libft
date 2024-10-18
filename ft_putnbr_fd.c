@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:18:29 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/16 15:18:30 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/18 13:25:56 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putnbr_fd(int n, int fd)
 	int		i;
 
 	i = 0;
-	s = itoa(n);
+	s = ft_itoa(n);
 	while (s[i])
 	{
 		write(fd, &s[i], 1);
