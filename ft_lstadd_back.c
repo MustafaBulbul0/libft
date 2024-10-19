@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:04:10 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/18 20:49:17 by mustafa          ###   ########.fr       */
+/*   Updated: 2024/10/19 10:38:16 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -19,7 +18,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	temp = *lst;
 	if (!new)
-		return;
+		return ;
 	if (!lst)
 	{
 		*lst = new;

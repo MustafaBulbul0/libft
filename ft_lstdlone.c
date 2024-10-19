@@ -6,13 +6,13 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:04:45 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/16 15:04:46 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/19 10:40:20 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst)
 		return ;
