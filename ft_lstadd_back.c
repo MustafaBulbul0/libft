@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:04:10 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/19 10:38:16 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/19 17:15:58 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	temp = *lst;
 	if (!new)
 		return ;
-	if (!lst)
+	if (!*lst)
 	{
 		*lst = new;
 		return ;

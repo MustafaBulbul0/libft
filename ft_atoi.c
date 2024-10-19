@@ -6,7 +6,7 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:02:02 by mustafa           #+#    #+#             */
-/*   Updated: 2024/10/19 10:38:02 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/19 13:15:39 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *chNum)
 	}
 	while (chNum[i] >= '0' && chNum[i] <= '9')
 	{
-		j = j + 10 + (chNum[i] - '0');
+		j = j * 10 + (chNum[i] - '0');
 		i++;
 	}
 	return (j * k);

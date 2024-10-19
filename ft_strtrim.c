@@ -6,89 +6,49 @@
 /*   By: mubulbul <mubulbul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:21:35 by mubulbul          #+#    #+#             */
-/*   Updated: 2024/10/16 15:21:36 by mubulbul         ###   ########.fr       */
+/*   Updated: 2024/10/19 21:56:27 by mubulbul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	next_trim(char const *s1, char const *set);
-static size_t	back_trim(char const *s1, char const *set);
+static size_t	next_trim(char const *s1, char const *set)
+{
+	size_t	l;
+
+	l = 0;
+	while (s1[l] && ft_strchr(set, s1[l]))
+		l++;
+	return (l);
+}
+
+static size_t	back_trim(char const *s1, char const *set)
+{
+	size_t	l;
+
+	l = ft_strlen(s1);
+	while (l > 0 && ft_strchr(set, s1[l - 1]))
+		l--;
+	return (l);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	b_trim;
 	size_t	n_trim;
 	size_t	n_total_size;
-	size_t	i;
 	char	*ptr;
 
-	i = 0;
+	if (!s1 || !set)
+		return (NULL);
 	n_trim = next_trim(s1, set);
 	b_trim = back_trim(s1, set);
-	n_total_size = ft_strlen(s1) - n_trim - b_trim;
+	n_total_size = b_trim - n_trim;
+	if (n_trim >= b_trim)
+		return (ft_strdup(""));
 	ptr = (char *)malloc(n_total_size + 1);
-	while (i < n_total_size)
-	{
-		ptr[i] = s1[n_trim + i];
-		i++;
-	}
-	ptr[i] = '\0';
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, s1 + n_trim, n_total_size + 1);
 	return (ptr);
-}
-
-static size_t	next_trim(char const *s1, char const *set)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	l;
-
-	l = 0;
-	k = 1;
-	j = 0;
-	while (k)
-	{
-		k = 0;
-		i = 0;
-		while (set[i])
-		{
-			if (set[i] == s1[l])
-			{
-				j++;
-				k = 1;
-			}
-			i++;
-		}
-		l++;
-	}
-	return (j);
-}
-
-static size_t	back_trim(char const *s1, char const *set)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	l;
-
-	l = ft_strlen(s1);
-	k = 1;
-	j = 0;
-	while (k)
-	{
-		k = 0;
-		i = 0;
-		while (set[i])
-		{
-			if (set[i] == s1[l - 1])
-			{
-				j++;
-				k = 1;
-			}
-			i++;
-		}
-		l--;
-	}
-	return (j);
 }
