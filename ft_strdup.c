@@ -6,13 +6,14 @@
 /*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:19:47 by mubulbul          #+#    #+#             */
-/*   Updated: 2025/02/16 14:11:31 by mustafa          ###   ########.fr       */
+/*   Updated: 2025/02/16 16:56:28 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	count_strs(const char **str);
+void	clear_2d_pointer(char **map);
 
 char	*ft_strdup(const char *str)
 {
